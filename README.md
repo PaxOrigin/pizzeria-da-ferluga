@@ -13,3 +13,13 @@ Ho violato parecchi principi solid, con business logic associata a singole mega 
 
 Grazie di tutto, dei consigli e delle lezioni. Si vede che ci tieni nel formarci ed e' stato molto apprezzato, ci si vede a giugno,
 Alessandro.
+
+## Errori Trovati
+
+Non ho messo il SaveChanges quindi quando associo all'id della ricevuta il nome del file, l'id e' sempre zero. Aggiungendo SaveChanges funziona e salva tutte le ricevute.
+La classe non utilizzata order nel db crea problemi, togliere quella, la sua configurazione e il suo riferimento nel db context per far funzionare il programma
+
+## Funzionamento
+
+Inserire i file csv contenenti gli ordini nella cartella UnprocessedOrders (creata al primo avvio del programma nella cartella temp/FerlugaPizzeria)
+Avviare nuovamente il programma
