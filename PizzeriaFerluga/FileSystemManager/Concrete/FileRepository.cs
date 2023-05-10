@@ -16,9 +16,9 @@ public class FileRepository : IFileRepository
     {
         _mainDirectoryPath = Directory.Exists(mainPath) ? mainPath : Path.GetTempPath();
         MainDirectory = Directory.CreateDirectory(Path.Combine(_mainDirectoryPath, "FerlugaPizzeria"));
-        UnprocessedOrders = Directory.CreateDirectory(Path.Combine(_mainDirectoryPath, "Unprocessed Orders"));
-        ProcessedOrders = Directory.CreateDirectory(Path.Combine(_mainDirectoryPath, "Processed Orders"));
-        Receipts = Directory.CreateDirectory(Path.Combine(_mainDirectoryPath, "Receipts"));
+        UnprocessedOrders = Directory.CreateDirectory(Path.Combine(MainDirectory.FullName, "Unprocessed Orders"));
+        ProcessedOrders = Directory.CreateDirectory(Path.Combine(MainDirectory.FullName, "Processed Orders"));
+        Receipts = Directory.CreateDirectory(Path.Combine(MainDirectory.FullName, "Receipts"));
     }
 
     public string GetFolderMainPath() => MainDirectory.FullName;
