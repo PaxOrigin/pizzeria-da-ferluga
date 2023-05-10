@@ -10,8 +10,6 @@ public class PizzaRepository
     {
         _context = context;
     }
-    public void AddOrders(List<Orders> orders)
-        => _context.Orders.AddRange(orders);
 
     public void AddPizzaOrders(List<PizzaOrder> pizzaOrders)
         => _context.PizzaOrders.AddRange(pizzaOrders);

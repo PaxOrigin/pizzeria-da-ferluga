@@ -21,25 +21,6 @@ namespace DatabaseHandler.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("DatabaseHandler.Models.Orders", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("ReceiptId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id")
-                        .HasName("PK_Receipt");
-
-                    b.HasIndex("ReceiptId");
-
-                    b.ToTable("Orders", (string)null);
-                });
-
             modelBuilder.Entity("DatabaseHandler.Models.PizzaOrder", b =>
                 {
                     b.Property<int>("Id")
@@ -81,17 +62,6 @@ namespace DatabaseHandler.Migrations
                         .HasName("PK_Receipt");
 
                     b.ToTable("Receipts", (string)null);
-                });
-
-            modelBuilder.Entity("DatabaseHandler.Models.Orders", b =>
-                {
-                    b.HasOne("DatabaseHandler.Models.Receipt", "Receipt")
-                        .WithMany()
-                        .HasForeignKey("ReceiptId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Receipt");
                 });
 
             modelBuilder.Entity("DatabaseHandler.Models.PizzaOrder", b =>

@@ -13,12 +13,14 @@ namespace PizzeriaFerluga
     {
         static void Main(string[] args)
         {
+
             var a = new FileRepository("aaa");
             List<PizzaOrder> pizzaOrders = new List<PizzaOrder>();
             PizzeriaContext context = new PizzeriaContext();
             CSVReader csvReader = new CSVReader();
             PizzaOrdersProcesser pizzaProcesser = new PizzaOrdersProcesser();
             FileReader reader = new FileReader();
+
             do
             {
 
@@ -32,7 +34,8 @@ namespace PizzeriaFerluga
                 receipt.Price = allPizzaOrders.Sum(o => o.Price);
                 context.Receipts.Add(receipt);
                 context.PizzaOrders.AddRange(allPizzaOrders);
-                string receiptFilePath = Path.Combine(a.Receipts.FullName, $"Receipt_{receipt.Id}");
+                context.SaveChanges();
+                string receiptFilePath = Path.Combine(a.Receipts.FullName, $"Receipt_{receipt.Id}_{DateTime.Now.ToString("yyyy MM dd HH mm ss")}");
                 StringBuilder receiptDescription = new StringBuilder();
                 receiptDescription.AppendLine($"Receipt number: {receipt.Id}");
                 foreach (var item in allPizzaOrders)
