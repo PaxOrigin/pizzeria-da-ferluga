@@ -12,5 +12,6 @@ public class PizzaOrdersConfiguration : IEntityTypeConfiguration<PizzaOrder>
         entity.HasKey(x => x.Id)
             .HasName("PK_PizzaOrders");
         entity.ToTable("Pizza Orders");
+        entity.Property(x => x.Price).HasPrecision(5, 2);
     }
 }

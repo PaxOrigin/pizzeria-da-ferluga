@@ -3,7 +3,7 @@
 using PizzeriaFerluga.PizzaDecorator;
 using PizzeriaFerluga.PizzaFactory.cs;
 
-namespace PizzeriaFerluga;
+namespace PizzeriaFerluga.PizzaProcesser;
 
 public class PizzaOrdersProcesser : IPizzaOrdersProcesser
 {
@@ -11,7 +11,6 @@ public class PizzaOrdersProcesser : IPizzaOrdersProcesser
     {
         PizzaFactoryMethod pizzaFactory = new PizzaFactoryMethod();
         List<PizzaOrder> pizzaOrders = new List<PizzaOrder>();
-        PizzaOrder pizzaOrder = new PizzaOrder();
 
         foreach (var order in orders)
         {

@@ -1,6 +1,6 @@
 ﻿using DatabaseHandler.Models;
 
-namespace PizzeriaFerluga
+namespace PizzeriaFerluga.PizzaProcesser
 {
     public interface IPizzaOrdersProcesser
     {

@@ -12,5 +12,7 @@ internal class ReceiptConfiguration : IEntityTypeConfiguration<Receipt>
         entity.HasKey(x => x.Id)
             .HasName("PK_Receipt");
         entity.ToTable("Receipts");
+
+        entity.Property(x => x.Price).HasPrecision(5, 2);
     }
 }
