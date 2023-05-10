@@ -9,4 +9,7 @@ Ho violato parecchi principi solid, con business logic associata a singole mega 
 - Avrei preferito riordinare la business logic, con classi ed interfacce specifiche che si occupano di spostare i file
 - Avrei aggiunto una cartella Failed Orders nella quale finiscono gli ordini il cui processing fallisce
 - Avrei voluto usare il config file che ora come ora non ha alcuna utilita
-- Potrebbero esserci classi non utilizzate.
+- Potrebbero esserci classi non utilizzate, il codice non e' pulito o leggibile come avrei voluto.
+
+Grazie di tutto, dei consigli e delle lezioni. Si vede che ci tieni nel formarci ed e' stato molto apprezzato, ci si vede a giugno,
+Alessandro.
