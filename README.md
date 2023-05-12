@@ -19,6 +19,11 @@ Alessandro.
 Non ho messo il SaveChanges quindi quando associo all'id della ricevuta il nome del file, l'id e' sempre zero. Aggiungendo SaveChanges funziona e salva tutte le ricevute.
 La classe non utilizzata order nel db crea problemi, togliere quella, la sua configurazione e il suo riferimento nel db context per far funzionare il programma
 
+## Comprensione della consegna sbagliata
+
+Confrontandomi con i colleghi mi sono accorto di aver completamente sbagliato la lettura della stringa in ingresso non mettendo alcun check per verificare che tale stringa fosse nel formato desiderato Base;Impasto;Ingrediente1,Ingrediente2.
+Il programma funziona comunque nel branch alternativo fintanto che viene rispettato l'ordine, procedo a modificare la versione nel branch in modo tale da gestire anche questo tipo di errore e verificare che il formato in ingresso sia quello corretto e richiesto dal cliente.
+
 ## Funzionamento
 
 Inserire i file csv contenenti gli ordini nella cartella UnprocessedOrders (creata al primo avvio del programma nella cartella temp/FerlugaPizzeria)
