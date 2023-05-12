@@ -28,3 +28,7 @@ Il programma funziona comunque nel branch alternativo fintanto che viene rispett
 
 Inserire i file csv contenenti gli ordini nella cartella UnprocessedOrders (creata al primo avvio del programma nella cartella temp/FerlugaPizzeria)
 Avviare nuovamente il programma
+
+## Modifiche pomeridiane
+
+Aggiunto in una branch separata ioc e reso il programma piu' leggibile e funzionale. 
